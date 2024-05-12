@@ -71,24 +71,30 @@ ninja -C build install
 
 ### Code style
 
-All code is auto-formatted with [Black](https://github.com/psf/black) and linted with [Pylint](https://github.com/pylint-dev/pylint). Imports are sorted by [isort](https://github.com/pycqa/isort).
+All code is auto-formatted with [Black](https://github.com/psf/black) and
+linted with [Pylint](https://github.com/pylint-dev/pylint). Imports are sorted
+by [isort](https://github.com/pycqa/isort).
 
-VSCode extensions are available for all of these and you can set them up with the following `settings.json` configuration:
+Just copy `vscode.settings.json` from the root directory of this project to the `<project root>.vscode/` subdirectory before you open vscode.
 
-```json
-"python.formatting.provider": "none",
-"[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-},
-"isort.args":["--profile", "black"],
+```bash
+$ mkdir .vscode
+$ cp vscode.settings.json .vscode/settings.json
+$
 ```
-NOTE: the above will blow Visual Studio to outer space on startup if copied verbatim.
+
+You can install the Black, Pylint, and isort extensions via the usual Extensions sidebar in VSCode.
 
 For other code editors, you can install them via `pip` and invoke them from the command line.
+
+### Python Setup
+
+There is a regular pyproject.toml file, formatted for use with [Rye](https://rye-up.com/) which also installs local versions of each of those tools as development dependencies so you can use them from the command line or in a `pre-commit` type configuration.
+
+Just use:
+```bash
+$ rye sync
+```
 
 ## Translations
 

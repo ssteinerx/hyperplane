@@ -1,0 +1,28 @@
+[project]
+name = "hyperplane"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Steve Steiner", email = "ssteinerX@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pylint>=3.1.0",
+    "black>=24.4.2",
+    "isort>=5.13.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hyperplane"]
