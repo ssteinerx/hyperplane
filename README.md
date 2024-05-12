@@ -86,6 +86,7 @@ VSCode extensions are available for all of these and you can set them up with th
 },
 "isort.args":["--profile", "black"],
 ```
+NOTE: the above will blow Visual Studio to outer space on startup if copied verbatim.
 
 For other code editors, you can install them via `pip` and invoke them from the command line.
 
