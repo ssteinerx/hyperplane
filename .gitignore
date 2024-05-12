@@ -2,3 +2,7 @@
 .flatpak-builder
 .flatpak
 .vscode
+
+# ssteinerX -- my private, temporary # TODO.md, transient, not part of the
+# project
+TODO.md
